@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaSearch, FaUser, FaBars, FaShoppingCart, FaTimes } from "react-icons/fa"; // Import necessary icons
+import { FaSearch, FaUser, FaBars, FaShoppingCart, FaTimes } from "react-icons/fa"; 
 import "./css/topnav.css";
 
 export const Topnav = () => {
@@ -15,12 +15,12 @@ export const Topnav = () => {
   return (
     <header className="topnav">
       <nav className="navbar">
-        {/* Hamburger menu (only shows on mobile) */}
+        
         <div className="menu-toggle" onClick={toggleMobileMenu}>
           {isMobileMenuOpen ? <FaTimes size={24} color="#fff" /> : <FaBars size={24} color="#fff" />}
         </div>
 
-        {/* Navigation Links - Visible when 'active' class is added */}
+        
         <ul className={`nav-links ${isMobileMenuOpen ? "active" : ""}`}>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
@@ -28,7 +28,7 @@ export const Topnav = () => {
           <li><Link to="/contact">Contact</Link></li>
         </ul>
 
-        {/* Search Input */}
+        
         <div className="search-container">
           <input type="text" placeholder="Search..." className="search-input" />
           <FaSearch size={13} color="#3498db" className="search-icon" />
@@ -45,7 +45,7 @@ export const Topnav = () => {
           </a>
         </div>
 
-        {/* Cart Icon */}
+        
         <div className={`cart-icon ${isMobileMenuOpen ? "active" : ""}`}>
           <FaShoppingCart size={18} />
         </div>

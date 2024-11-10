@@ -1,0 +1,249 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeInBackdrop 0.3s ease-out;
+}
+
+/* Modal container */
+.auth-modal {
+  background: linear-gradient(135deg, #db3495, #2980b9); 
+  color: #fff;
+  padding:40px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  min-width: 320px; 
+  position: relative;
+  animation: slideIn 0.4s ease-out;
+  overflow: hidden;
+}
+
+/* Backdrop fade-in */
+@keyframes fadeInBackdrop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide-in animation for the modal */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Close button (×) */
+.close-btn {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  font-size: 32px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #f39c12; 
+  transform: rotate(180deg);
+}
+
+/* Header for the form */
+.auth-form-container h2 {
+  font-size: 28px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Form fields */
+.auth-form-container input {
+  width: 100%;
+  padding: 15px 5px;
+  margin-bottom: 20px;
+  border: 2px solid #ddd;
+  text-align: left;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #f7f7f7;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+
+.auth-form-container label{
+  text-align: left;
+  font-weight: bolder;
+  float: left;
+  margin-bottom: 10px;
+}
+
+.auth-form-container input:focus {
+  border-color: #3498db;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+  outline: none;
+}
+
+/* Submit button */
+.auth-form-container button {
+  padding: 16px 20px;
+  background-color: #2980b9;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 50%;
+  font-weight: bolder;
+  transition: all 0.3s ease;
+}
+
+.auth-form-container button:hover {
+  background-color: #333;
+  transform: translateY(-4px); /* Slight lift on hover */
+}
+
+.auth-form-container button:active {
+  background-color: #2980b9;
+  transform: translateY(2px); /* Slight indentation on click */
+}
+
+/* Text links between forms */
+.auth-form-container p {
+  text-align: center;
+  color: #f0f0f0;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.auth-form-container span {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.auth-form-container span:hover {
+  color: #f39c12; /* Golden hover color */
+}
+
+/* Responsive design for tablets, phones, etc. */
+
+/* Large screens (laptops and desktops) */
+@media (max-width: 1024px) {
+  .auth-modal {
+    max-width: 600px;
+    padding: 35px 45px;
+  }
+
+  .auth-form-container h2 {
+    font-size: 26px;
+  }
+
+  .auth-form-container input {
+    font-size: 15px;
+    padding: 14px 18px;
+  }
+
+  .auth-form-container button {
+    font-size: 16px;
+    padding: 14px 18px;
+  }
+}
+
+/* Tablets and small laptops (portrait) */
+@media (max-width: 768px) {
+  .auth-modal {
+    max-width:85%;
+    padding: 30px 40px;
+  }
+
+  .auth-form-container h2 {
+    font-size: 15px;
+  }
+
+  .auth-form-container input {
+    font-size: 14px;
+    padding: 12px 16px;
+    width: 80%;
+  }
+
+  .auth-form-container button {
+    font-size: 15px;
+    padding: 14px 16px;
+  }
+
+  .auth-form-container p {
+    font-size: 14px;
+  }
+
+  .auth-form-container span {
+    font-size: 14px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .auth-modal {
+    max-width:50%;
+    padding: 20px 30px;
+    width: 200px;
+    
+  }
+
+  .auth-form-container h2 {
+    font-size: 22px;
+  }
+
+  .auth-form-container input {
+    font-size: 12px;
+    padding: 12px 10px;
+    width: 70%;
+  }
+  .auth-form-container label{
+    color: red;
+    margin: 10px 40px;
+  }
+
+  .close-btn{
+    margin-right:30px;
+  }
+
+  .auth-form-container button {
+    font-size: 14px;
+    padding: 14px 16px;
+  }
+
+  .auth-form-container p {
+    font-size: 13px;
+  }
+
+  .auth-form-container span {
+    font-size: 13px;
+  }
+}
