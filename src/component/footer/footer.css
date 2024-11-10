@@ -1,0 +1,160 @@
+/* CSS Variables for easier theming */
+:root {
+    --primary-bg-color: #333;
+    --secondary-bg-color: #4CAF50;
+    --text-color: #fff;
+    --link-hover-color: #4CAF50;
+    --font-size-base: 14px;
+    --font-family: 'Arial', sans-serif;
+    --padding-small: 10px;
+    --padding-medium: 20px;
+    --padding-large: 40px;
+    --section-gap: 20px;
+    --footer-border-color: #444;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Basic reset for margin, padding, and box-sizing */
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Ensure the page takes full height */
+  html, body {
+    height: 100%;
+    font-family: var(--font-family);
+  }
+  
+  /* Set up flexbox layout for the entire page */
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures footer is pushed to the bottom if content is short */
+    line-height: 1.6;
+  }
+  
+  /* Main content takes up available space */
+  .main-content {
+    flex: 1; /* Fill the remaining space between header and footer */
+  }
+  
+  /* Footer Styling */
+  footer {
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+    padding: var(--padding-large) var(--padding-medium);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: auto;
+    text-align: left;
+    border-top: 1px solid var(--footer-border-color);
+    box-shadow: 0 -4px 10px var(--shadow-light); /* Subtle shadow effect */
+    position: relative;
+  }
+  
+  /* Footer section styles */
+  footer .footer-section {
+    margin-bottom: var(--section-gap);
+    padding-left: var(--padding-small);
+    max-width: 380px; /* Limit section width */
+  }
+  
+  footer h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: var(--section-gap);
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Style for paragraph and unordered list */
+  footer p, footer ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  footer ul {
+    list-style: none;
+  }
+  
+  footer li {
+    margin-bottom: 8px;
+  }
+  
+  footer li a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease, padding-left 0.3s ease;
+  }
+  
+  /* Hover effect for links */
+  footer li a:hover {
+    color: var(--link-hover-color);
+    transform: translateX(4px); /* Slight movement on hover */
+    padding-left: 4px; /* Add subtle left padding on hover */
+  }
+  
+  /* Accessibility - Focus styles */
+  footer li a:focus {
+    outline: 2px solid var(--link-hover-color);
+    outline-offset: 4px;
+  }
+  
+  /* Responsive Design for larger screens */
+  @media (min-width: 768px) {
+    footer {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: var(--padding-large) 60px;
+    }
+  
+    footer .footer-section {
+      width: 30%; /* Each section takes up 30% of the width on larger screens */
+      margin-bottom: 0; /* Remove bottom margin */
+    }
+  }
+  
+  /* Mobile and smaller devices: stack sections vertically */
+  @media (max-width: 767px) {
+    footer {
+      padding: var(--padding-medium);
+    }
+  
+    footer .footer-section {
+      width: 100%; /* Full width for each section on smaller screens */
+      margin-bottom: var(--section-gap);
+    }
+  
+    footer .footer-section ul {
+      padding-left: var(--padding-small);
+    }
+  }
+  
+  /* Add some subtle animations for smoothness */
+  footer li a {
+    transition: color 0.3s ease, transform 0.3s ease, padding-left 0.3s ease;
+  }
+  
+  /* Max-width for content in larger screens */
+  footer .footer-section {
+    max-width: 400px;
+    margin: 0 auto; /* Center the content */
+  }
+  
+  /* Ensures the footer is always at the bottom of the page */
+  html, body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full height of the viewport */
+  }
+  
+  footer {
+    margin-top: auto; /* Push footer to the bottom if content is short */
+  }
+  

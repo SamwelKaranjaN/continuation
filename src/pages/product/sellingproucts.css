@@ -1,0 +1,164 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif; /* Google Font */
+    background-color: #f4f7fc;
+    color: #333;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Dark Mode */
+  body[data-theme="dark"] {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+  }
+  
+  .category-menu {
+    width: 100%;
+    max-width: 350px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .category-menu[data-theme="dark"] {
+    background-color: #34495e;
+  }
+  
+  /* Hover effect on container */
+  .category-menu:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Category Section */
+  .category {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s;
+  }
+  
+  .category:last-child {
+    border-bottom: none;
+  }
+  
+  /* Category Button */
+  .category-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-align: left;
+  }
+  
+  .category-btn:hover {
+    background: linear-gradient(90deg, #2980b9, #8e44ad);
+    color: white;
+    border-radius: 8px;
+  }
+  
+  /* Icon for the button */
+  .category-btn::after {
+    content: ' ▼';
+    font-size: 16px;
+    transition: transform 0.3s ease;
+  }
+  
+  .category-btn.active::after {
+    transform: rotate(180deg);
+  }
+  
+  /* Subcategory List */
+  .subcategories {
+    padding: 10px 15px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    margin-top: 8px;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+  }
+  
+  /* Show subcategories when active */
+  .category-btn.active + .subcategories {
+    max-height: 500px;
+    opacity: 1;
+    transition: max-height 0.6s ease, opacity 0.6s ease;
+  }
+  
+  /* Subcategory Item */
+  .subcategory {
+    padding: 8px 0;
+    font-size: 16px;
+    color: #34495e;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .subcategory:hover {
+    color: #2980b9;
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .category-menu {
+      max-width: 100%;
+      margin: 15px;
+    }
+  
+    .category-btn {
+      font-size: 16px;
+      padding: 10px;
+    }
+  
+    .subcategory {
+      font-size: 14px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .category-btn {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .subcategory {
+      font-size: 13px;
+    }
+  }
+  
+  /* Dark Mode Toggle Button */
+  .theme-toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #2980b9;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .theme-toggle-btn:hover {
+    background-color: #8e44ad;
+  }
+  
