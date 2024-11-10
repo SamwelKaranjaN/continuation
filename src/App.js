@@ -8,15 +8,15 @@ import { Topnav } from './component/topnav';
 import { Authenticated } from './pages/login_register/authenticate';
 import './App.css';
 import NotFound from './pages/notfound/notfound';
-import { ProductGroups } from './pages/ecommerceproducts';
+import { OurProduct } from './pages/product/sellingproducts';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Topnav />
-        <ProductGroups />
         <main>
+        <OurProduct />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
