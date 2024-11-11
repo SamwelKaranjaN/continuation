@@ -8,7 +8,7 @@ export const ProductGroups = [
       subcategories: ['Phones', 'Laptops', 'Tablets', 'Accessories', 'TVs', 'Headphones', 'Cameras', 'Smartwatches']
     },
     {
-      name: 'Sports & Outdoors',
+      name: 'Sports',
       subcategories: ['Camping', 'Cycling', 'Fitness', 'Outdoor Gear', 'Fishing', 'Hiking', 'Running', 'Winter Sports']
     },
     {
@@ -28,25 +28,21 @@ export const ProductGroups = [
       subcategories: ['Action Figures', 'Board Games', 'Building Toys', 'Dolls & Stuffed Animals', 'Educational Toys', 'Puzzles', 'Outdoor Play', 'Video Games']
     },
     {
-      name: 'Automotive',
-      subcategories: ['Car Accessories', 'Motorcycle Gear', 'Tools & Equipment', 'Parts & Repairs', 'Tires', 'Cleaning Supplies', 'GPS & Navigation', 'Car Electronics']
-    },
-    {
       name: 'Books & Media',
       subcategories: ['Fiction', 'Non-fiction', 'Children\'s Books', 'Textbooks', 'E-books', 'Music', 'Movies', 'Audiobooks']
     },
-    {
-      name: 'Pet Supplies',
-      subcategories: ['Dog', 'Cat', 'Fish', 'Birds', 'Small Animals', 'Reptiles', 'Pet Food', 'Pet Health']
-    },
+    // {
+    //   name: 'Pet Supplies',
+    //   subcategories: ['Dog', 'Cat', 'Fish', 'Birds', 'Small Animals', 'Reptiles', 'Pet Food', 'Pet Health']
+    // },
     {
       name: 'Office Supplies',
       subcategories: ['Office Furniture', 'Stationery', 'Office Equipment', 'Filing & Storage', 'Printer Supplies', 'Organizers', 'Writing Instruments']
     },
-    {
-      name: 'Garden & Outdoors',
-      subcategories: ['Gardening Tools', 'Outdoor Furniture', 'BBQs & Outdoor Heating', 'Planters', 'Pest Control', 'Lawn Care', 'Pools & Spas']
-    },
+    // {
+    //   name: 'Garden',
+    //   subcategories: ['Gardening Tools', 'Outdoor Furniture', 'BBQs & Outdoor Heating', 'Planters', 'Pest Control', 'Lawn Care', 'Pools & Spas']
+    // },
     {
       name: 'Jewelry & Watches',
       subcategories: ['Rings', 'Necklaces', 'Bracelets', 'Earrings', 'Watches', 'Sunglasses', 'Brooches', 'Tiaras']
@@ -64,16 +60,16 @@ export const ProductGroups = [
       name: 'Gaming',
       subcategories: ['PC Games', 'Console Games', 'Game Accessories', 'Game Consoles', 'Board Games', 'eSports Gear', 'VR Games']
     },
-    {
-      name: 'Photography',
-      subcategories: ['Cameras', 'Lenses', 'Tripods', 'Lighting & Flash', 'Photography Backdrops', 'Drones', 'Action Cameras', 'Camera Bags']
-    },
+    // {
+    //   name: 'Photography',
+    //   subcategories: ['Cameras', 'Lenses', 'Tripods', 'Lighting & Flash', 'Photography Backdrops', 'Drones', 'Action Cameras', 'Camera Bags']
+    // },
     {
       name: 'Fitness',
       subcategories: ['Exercise Equipment', 'Sports Nutrition', 'Yoga & Pilates', 'Strength Training', 'Cardio Equipment', 'Outdoor Sports', 'Wearable Fitness Devices']
     },
     {
-      name: 'Travel & Luggage',
+      name: 'Travel',
       subcategories: ['Luggage', 'Backpacks', 'Travel Accessories', 'Travel Clothing', 'Camping Gear', 'Carry-ons', 'Travel Organizers']
     },
   ];

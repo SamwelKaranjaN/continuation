@@ -8,8 +8,8 @@ export const Footer = () => {
       <div className="footer-section contact-info">
         <h3>Contact Information</h3>
         <p>Kenya at Samwel Karanja</p>
-        <p>Email: example@example.com</p>
-        <p>Phone: +123 456 7890</p>
+        <p>Email: samwelnjoroge757@gmail.com</p>
+        <p>Phone: +254793878068</p>
       </div>
 
       <div className="footer-section customer-service">
