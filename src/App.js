@@ -8,7 +8,7 @@ import { Topnav } from './component/topnav';
 import { Authenticated } from './pages/login_register/authenticate';
 import './App.css';
 import NotFound from './pages/notfound/notfound';
-import { OurProduct } from './pages/product/sellingproducts';
+import { Company } from './pages/product/company';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
       <Router>
         <Topnav />
         <main>
-        <OurProduct />
+        <Company />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

@@ -1,0 +1,72 @@
+.company-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.categories {
+    display: flex;
+    flex-direction: row; /* Align the categories horizontally */
+    justify-content: flex-start;
+    gap: 20px; /* Add space between categories */
+    flex-wrap: wrap; /* Allow wrapping if there's not enough space */
+    position: relative;
+}
+
+.category {
+    position: relative; /* Ensures subcategories are positioned relative to this */
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.category:hover {
+    background-color: #ddd; /* Highlight on hover */
+}
+
+.category-name {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Position subcategory list directly below the category */
+.subcategory-list {
+    position: absolute; /* Position it absolutely inside the category */
+    top: 100%; /* Position it directly below the category */
+    left: 0;
+    padding-left: 20px; /* Indent subcategories */
+    background-color: white; /* Ensure subcategory list has a background */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow to make it stand out */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0s 0.3s; /* Fade effect */
+    z-index: 5; /* Ensure the subcategory is above other categories */
+}
+
+/* Show subcategory list when category is hovered */
+.category:hover .subcategory-list {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s, visibility 0s 0s; /* Fade-in */
+}
+
+.subcategory {
+    color: #555;
+    padding: 5px 0;
+    cursor: pointer; /* Make subcategory clickable */
+}
+
+.subcategory:hover {
+    text-decoration: underline; /* Highlight on hover */
+}
+
+/* Optional: Make it responsive for smaller screens */
+@media (max-width: 768px) {
+    .categories {
+        flex-direction: column; /* Stack categories vertically on small screens */
+        align-items: flex-start;
+    }
+}

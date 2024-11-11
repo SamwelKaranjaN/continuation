@@ -55,14 +55,7 @@ export const ProductGroups = [
       name: 'Technology',
       subcategories: ['Smartphones', 'Smart Home Devices', 'Drones', 'VR Headsets', '3D Printers', 'Wearables', 'Gaming Consoles', 'Smart TVs']
     },
-    {
-      name: 'Music Instruments',
-      subcategories: ['Guitars', 'Keyboards', 'Drums', 'Wind Instruments', 'Strings & Accessories', 'DJ Equipment', 'Audio Gear', 'Sheet Music']
-    },
-    {
-      name: 'Crafts & DIY',
-      subcategories: ['Art Supplies', 'Sewing & Knitting', 'Home Improvement', 'Woodworking', 'Modeling & Hobbies', 'Paint & Decor', 'Craft Kits']
-    },
+    
     {
       name: 'Food & Beverage',
       subcategories: ['Wine & Spirits', 'Gourmet Gifts', 'Organic Foods', 'Gluten-Free', 'Specialty Foods', 'Vegan & Vegetarian', 'Beverages']
@@ -83,13 +76,5 @@ export const ProductGroups = [
       name: 'Travel & Luggage',
       subcategories: ['Luggage', 'Backpacks', 'Travel Accessories', 'Travel Clothing', 'Camping Gear', 'Carry-ons', 'Travel Organizers']
     },
-    {
-      name: 'Home Improvement',
-      subcategories: ['Lighting', 'Plumbing', 'Hardware', 'Paint & Primer', 'Building Materials', 'Home Safety', 'Electrical Equipment', 'Tools']
-    },
-    {
-      name: 'Real Estate',
-      subcategories: ['Properties for Sale', 'Properties for Rent', 'Vacation Rentals', 'Commercial Properties', 'Real Estate Agencies', 'Land']
-    }
   ];
   
