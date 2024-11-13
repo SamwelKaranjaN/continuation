@@ -9,6 +9,8 @@ import { Authenticated } from './pages/login_register/authenticate';
 import './App.css';
 import NotFound from './pages/notfound/notfound';
 import { Company } from './pages/product/company';
+import { Food } from './pages/food/food';
+import { Tested } from './pages/food/test';
 
 function App() {
   return (
@@ -16,7 +18,9 @@ function App() {
       <Router>
         <Topnav />
         <main>
-        <Company />
+          <Company />
+          <Tested />
+          <Food />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
