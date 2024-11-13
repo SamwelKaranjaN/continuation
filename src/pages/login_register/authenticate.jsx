@@ -59,6 +59,7 @@ export const Authenticated = ({ formtype }) => {
                 />
               </div>
               <button type="submit">Login</button>
+                <h5> or use your GMAIL</h5>
               <p>
                 Don't have an account?{" "}
                 <span

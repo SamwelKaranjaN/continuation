@@ -1,6 +1,10 @@
 export const ProductGroups = [
     {
+      id: 1,
       name: 'Food',
+      productname: 'Fried Potatoe',
+      price: 500,
+      
       subcategories: ['Fruits', 'Vegetables', 'Snacks', 'Dairy', 'Beverages', 'Canned Goods', 'Frozen Food']
     },
     {
