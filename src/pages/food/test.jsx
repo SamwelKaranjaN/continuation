@@ -1,10 +1,13 @@
+
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
-import "./test.css";
+import { CompanyCart } from "../cart/companycart";
+import { useCart } from "../../component/context/companycontext";
+import './test.css'
 
 export const Tested = () => {
   const [foodproducts, setFoodProducts] = useState([]);
-  const [selectedProduct, setSelectedProduct] = useState(null); 
+  const { handleAddToCart } = useCart(); // Access handleAddToCart from context
 
   useEffect(() => {
     Axios.get("https://fakestoreapi.com/products")
@@ -13,53 +16,29 @@ export const Tested = () => {
       })
       .catch((error) => console.error("Error fetching products:", error));
   }, []);
-  const handleProductClick = (product) => {
-    setSelectedProduct(product);
-  };
-  const handleOutsideClick = (e) => {
-    if (e.target.classList.contains("modal")) {
-      setSelectedProduct(null);
-    }
-  };
 
   return (
     <div>
-      {/* Render the list of products */}
       <div className="productfood">
         {foodproducts.map((product) => (
-          <div
-            
-          ><div key={product.id}
-          className="entries"
-          onClick={() => handleProductClick(product)}>
-            <h3>{product.title}</h3>
-            <img src={product.image} alt={product.title} />
-            <h4>${product.price}</h4>
+          <div key={product.id}>
+            <div className="entries">
+              <h3>{product.title}</h3>
+              <img src={product.image} alt={product.title} />
+              <h4>${product.price}</h4>
             </div>
-            <button className="addToCartBttn">Add To Cart</button>
+            <button
+              className="addToCartBttn"
+              onClick={() => handleAddToCart(product)}
+            >
+              Add To Cart
+            </button>
           </div>
         ))}
       </div>
 
-      {/* Render the modal if a product is selected */}
-      {selectedProduct && (
-        <div className="modal" onClick={handleOutsideClick}>
-          {" "}
-          {/* Add onClick to detect clicks outside */}
-          <div className="modal-content">
-            <h2>{selectedProduct.title}</h2>
-            <img
-              src={selectedProduct.image}
-              alt={selectedProduct.title}
-              style={{ width: "100px" }}
-            />
-            <h4>${selectedProduct.price}</h4>
-            <p>{selectedProduct.description}</p>{" "}
-            {/* Assuming 'description' holds the product details */}
-            <button className="addToCartBttn">Add To Cart</button>
-          </div>
-        </div>
-      )}
+      {/* Render CompanyCart */}
+      <CompanyCart />
     </div>
   );
 };

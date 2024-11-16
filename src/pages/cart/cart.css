@@ -1,0 +1,19 @@
+.cart-container {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .cart-item img {
+    margin-right: 10px;
+    border-radius: 3px;
+  }
+  
