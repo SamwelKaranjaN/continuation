@@ -47,7 +47,7 @@ export const Topnav = () => {
 
         
         <div className={`cart-icon ${isMobileMenuOpen ? "active" : ""}`}>
-          <FaShoppingCart size={18} />
+         <Link to="/companycart" ><FaShoppingCart size={18} /></Link> 
         </div>
       </nav>
     </header>

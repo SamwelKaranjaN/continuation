@@ -4,9 +4,8 @@ import "./test.css";
 
 export const Tested = () => {
   const [foodproducts, setFoodProducts] = useState([]);
-  const [selectedProduct, setSelectedProduct] = useState(null); // State to store the selected product
+  const [selectedProduct, setSelectedProduct] = useState(null); 
 
-  // Fetch products from the API
   useEffect(() => {
     Axios.get("https://fakestoreapi.com/products")
       .then((res) => {
@@ -29,14 +28,14 @@ export const Tested = () => {
       <div className="productfood">
         {foodproducts.map((product) => (
           <div
-            key={product.id}
-            className="entries"
-            onClick={() => handleProductClick(product)}
-          >
+            
+          ><div key={product.id}
+          className="entries"
+          onClick={() => handleProductClick(product)}>
             <h3>{product.title}</h3>
             <img src={product.image} alt={product.title} />
             <h4>${product.price}</h4>
-
+            </div>
             <button className="addToCartBttn">Add To Cart</button>
           </div>
         ))}
